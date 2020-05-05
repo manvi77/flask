@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask web application
+After=network.target
+
+[Service]
+User=flaskuser
+WorkingDirectory=/opt/app/
+ExecStart=/bin/bash -c "FLASK_APP=/opt/app/simpleflask1.py flask run"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
