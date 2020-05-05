@@ -1,5 +1,5 @@
 # flask
-simple python flask server. This python snippet code can receive data from webhooks and create/append data to a file. 
+simple python flask server. This python code snippet can receive data from webhooks and create/append data to a file. 
 
 #### install
 ```
