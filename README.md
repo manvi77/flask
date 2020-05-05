@@ -8,18 +8,12 @@ apt-get install python3-pip
 pip3 install -U Flask
 ```
 
-#### run command: 
+#### run 
+##### from command line: 
 ```
 FLASK_APP=simpleflask1.py flask run
 ```
-
-#### send and receive data:
-```
-curl -i -H "Content-Type: application/json" -X POST -d '{"userId":"1", "username": "cindrella"}' http://localhost:5000/foo
-curl -i -H "Content-Type: application/json" -X GET http://localhost:5000/fooread
-```
-
-#### create flask app as service
+##### create flask app as service
 ```
 useradd flaskuser --shell=/usr/sbin/nologin
 cp flask.service /etc/systemd/system/
@@ -28,4 +22,10 @@ systemctl daemon-reload
 systemctl enable flask.service
 systemctl start flask
 systemctl status flask
+```
+
+#### send and receive data:
+```
+curl -i -H "Content-Type: application/json" -X POST -d '{"userId":"1", "username": "cindrella"}' http://localhost:5000/foo
+curl -i -H "Content-Type: application/json" -X GET http://localhost:5000/fooread
 ```
