@@ -8,7 +8,7 @@ apt-get install python3-pip
 pip3 install -U Flask
 ```
 
-#### run 
+#### run(2 options:command or service)
 ##### from command line: 
 ```
 FLASK_APP=simpleflask1.py flask run
@@ -16,6 +16,7 @@ FLASK_APP=simpleflask1.py flask run
 ##### create flask app as service
 ```
 useradd flaskuser --shell=/usr/sbin/nologin
+chown -R flaskuser:flaskuser simpleflask1.py
 cp flask.service /etc/systemd/system/
 chmod 755 /etc/systemd/system/flask.service 
 systemctl daemon-reload
